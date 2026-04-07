@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escalerita - The Great Hack</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -34,7 +34,10 @@
             </div>
 
             <div class="info-panel">
-                <h2 id="turnInfo"></h2>
+                <h2 id="turnInfo">
+                    Turno de
+                    <div id="currentPlayerName"></div>
+                </h2>
 
                 <div class="dice-area">
                     <div class="dice" id="dice">🎲</div>
@@ -51,6 +54,20 @@
         <div class="modal-content">
             <h3 id="questionText"></h3>
             <div id="answers"></div>
+        </div>
+    </div>
+
+    <div id="resultsModal" class="modal hidden">
+        <div class="modal-content">
+            <h2>🏆 Puntajes Finales</h2>
+
+            <div id="finalScores"></div>
+
+            <p class="capture-msg">
+                📸 Recuerda tomar captura de los puntajes para subirlos al grupo
+            </p>
+
+            <button onclick="finishGame()">Finalizar</button>
         </div>
     </div>
 

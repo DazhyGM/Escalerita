@@ -126,7 +126,7 @@ button:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0, 0, 0, 0.7);
   justify-content: center;
   align-items: center;
 }
@@ -145,6 +145,7 @@ button:hover {
 .hidden {
   display: none !important;
 }
+
 .dice {
   font-size: 60px;
   margin: 20px;
@@ -168,11 +169,11 @@ body {
 .game-box {
   display: flex;
   gap: 50px;
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
   padding: 40px;
   border-radius: 20px;
   backdrop-filter: blur(10px);
-  box-shadow: 0 0 40px rgba(0,0,0,0.4);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
 }
 
 .board-section {
@@ -264,7 +265,7 @@ button:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0, 0, 0, 0.7);
   display: none;
   justify-content: center;
   align-items: center;
@@ -283,4 +284,126 @@ button:hover {
 
 .hidden {
   display: none !important;
+}
+
+#turnInfo {
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+#currentPlayerName {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 6px 15px;
+  border-radius: 10px;
+  color: white;
+  max-width: 200px;
+  word-wrap: break-word;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+.cell.final {
+  background: gold;
+  color: black;
+  font-weight: bold;
+  border: 2px solid orange;
+}
+
+.cell.final-question {
+  background: gold;
+  color: black;
+  font-weight: bold;
+  border: 3px solid orange;
+}
+
+.cell.final-win {
+  background: limegreen;
+  color: white;
+  font-weight: bold;
+  border: 3px solid darkgreen;
+}
+
+.capture-msg {
+  margin: 15px 0;
+  font-size: 0.9rem;
+  color: #ccc;
+  text-align: center;
+}
+
+#finalScores p {
+  font-size: 1.2rem;
+  margin: 8px 0;
+  font-weight: bold;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+
+  30% {
+    transform: translateY(-10px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  70% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.player.jump {
+  animation: jump 0.4s ease;
+}
+
+.confetti {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: red;
+  top: 0;
+  animation: fall linear forwards;
+  z-index: 9999;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+.modal-content {
+  animation: popIn 0.4s ease;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.player {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  transition: transform 0.4s ease;
+  z-index: 10;
 }
