@@ -1,0 +1,244 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #141e30, #243b55);
+  color: white;
+  text-align: center;
+  margin: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.start-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  background: #ff4b2b;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #ff416c;
+}
+
+.game-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(5, 80px);
+  grid-template-rows: repeat(5, 80px);
+  gap: 5px;
+}
+
+.cell {
+  background: #1f2a38;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-size: 12px;
+}
+
+.question {
+  background: #2d6cdf;
+}
+
+.trap {
+  background: #c0392b;
+}
+
+.bonus {
+  background: #27ae60;
+}
+
+.player {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.hidden {
+  display: none !important;
+}
+.dice {
+  font-size: 60px;
+  margin: 20px;
+  transition: transform 0.3s;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #141e30, #243b55);
+  color: white;
+  margin: 0;
+}
+
+.game-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.game-box {
+  display: flex;
+  gap: 50px;
+  background: rgba(255,255,255,0.05);
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 40px rgba(0,0,0,0.4);
+}
+
+/* Sección tablero */
+.board-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(5, 80px);
+  grid-template-rows: repeat(5, 80px);
+  gap: 8px;
+}
+
+/* Celdas */
+.cell {
+  background: #1f2a38;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-size: 13px;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+
+.cell:hover {
+  transform: scale(1.05);
+}
+
+/* Colores especiales */
+.question {
+  background: #2d6cdf;
+}
+
+.trap {
+  background: #c0392b;
+}
+
+.bonus {
+  background: #27ae60;
+}
+
+.info-panel {
+  width: 250px;
+  text-align: center;
+}
+
+.dice-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.dice {
+  font-size: 70px;
+  transition: transform 0.3s;
+}
+
+/* Botones */
+button {
+  padding: 10px 20px;
+  border: none;
+  background: #ff4b2b;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ff416c;
+  transform: scale(1.05);
+}
+
+.player {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #222;
+  padding: 25px;
+  border-radius: 15px;
+  width: 400px;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.hidden {
+  display: none !important;
+}

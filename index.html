@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Escalerita - The Great Hack</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="startScreen" class="start-screen">
+        <h1>The Great Hack</h1>
+        <h2>Juego Escalerita</h2>
+
+        <label>Selecciona número de jugadores:</label>
+        <select id="playerCount">
+            <option value="2">2 Jugadores</option>
+            <option value="3">3 Jugadores</option>
+            <option value="4" selected>4 Jugadores</option>
+            <option value="5">5 Jugadores</option>
+        </select>
+
+        <br>
+        <button id="startBtn">Iniciar Juego</button>
+    </div>
+
+    <div id="gameContainer" class="game-wrapper hidden">
+
+        <div class="game-box">
+
+            <div class="board-section">
+                <div class="board" id="board"></div>
+            </div>
+
+            <div class="info-panel">
+                <h2 id="turnInfo"></h2>
+
+                <div class="dice-area">
+                    <div class="dice" id="dice">🎲</div>
+                    <button id="diceBtn">Lanzar Dado</button>
+                </div>
+
+                <div id="scoreBoard"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="questionModal" class="modal hidden">
+        <div class="modal-content">
+            <h3 id="questionText"></h3>
+            <div id="answers"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
