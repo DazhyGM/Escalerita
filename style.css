@@ -4,6 +4,7 @@ body {
   color: white;
   text-align: center;
   margin: 0;
+  overflow-x: hidden;
 }
 
 .hidden {
@@ -155,8 +156,9 @@ body {
 .game-wrapper {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   min-height: 100vh;
+  padding: 20px 0;
 }
 
 .game-box {
@@ -413,4 +415,38 @@ button:hover {
     width: 95vw;
   }
 
+}
+
+@media (max-width: 768px) {
+
+  .game-wrapper {
+    align-items: flex-start;
+  }
+
+  .game-box {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .board-section {
+    width: 100%;
+  }
+
+  .info-panel {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .info-panel {
+    position: sticky;
+    bottom: 0;
+    background: rgba(20,30,48,0.95);
+    padding: 10px;
+    border-radius: 15px 15px 0 0;
+  }
 }
